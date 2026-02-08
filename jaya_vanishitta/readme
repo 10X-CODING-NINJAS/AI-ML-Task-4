@@ -1,0 +1,40 @@
+used 3 models (logistic regression, decision trees, random forest) to predict 
+breast cancer in women. 
+used dataset from scitlearn.
+dataset has 569 rows and 30 columns.
+used 20% testing and 80% training.
+This project evaluates the performance of three different machine learning models in predicting breast cancer (malignant vs. benign) using the UCI Breast Cancer Wisconsin Diagnostic dataset. The goal is to compare linear models (Logistic Regression) against non-linear tree-based models (Decision Trees and Random Forests).
+
+DATASET DESCRIPTION
+1. Source- sklearn.datasets.load_breast_cancer
+2. Number of samples - 569
+3. Number of features - 30
+4. Target: Binary (0: Malignant, 1: Benign)
+5. Preprocessing: Features were standardized using StandardScaler to ensure the Logistic Regression model converges efficiently, as it is sensitive to the scale of input data
+
+METHOLODY AND IMPLEMENTATION
+1. Split: 80% Training and 20% Testing.
+
+Models Implemented:
+
+1. Logistic Regression: A linear classifier that serves as our baseline.
+
+2. Decision Tree: A non-linear model that captures feature interactions.
+
+3. Random Forest: An ensemble method (bagging) designed to reduce variance.
+
+4. Hyperparameter Tuning: Conducted via GridSearchCV with 5-fold cross-validation to find the optimal balance between underfitting and overfitting.
+
+
+INSIGHTS LEARNED
+1. Linear vs non linear: Logistic regression works better than non linear models because many of the features have a strong linear correlation with the diagnosis.
+2. Bias variance tradeoff: 
+Model Complexity:  Low ──────→ Medium ────→ High
+                   [LR]        [RF]         [Deep DT]
+                   
+Gap:               1.09%       3.73%        8.55%
+Test Accuracy:     97.37%      95.61%       90.35%
+
+Optimal: Logistic Regression (Low complexity, high performance)
+
+3. Clinical Significance: In cancer detection, Recall is the most critical metric. A "False Negative" (missing a cancer diagnosis) is much more dangerous than a "False Positive."

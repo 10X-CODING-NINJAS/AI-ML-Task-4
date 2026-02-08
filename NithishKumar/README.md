@@ -15,7 +15,7 @@ To demonstrate the impact of domain specific feature engineering on model predic
 | :---------------- | :------------- | :------------- |
 | **Accuracy**      | 0.8082         | **0.8942**     |
 | **Feature Count** | 4 (Raw)        | 28 (Engineered)|
-| **Improvement**   | -              | **+10.64%**    |
+| **Improvement**   | -              | **+8.6%**    |
 
 ### Design Choices & Insights (Explanation Depth)
 The baseline model suffered from **underfitting** because it relied solely on session volume (e.g., number of product pages visited). I implemented three categories of features to resolve this:

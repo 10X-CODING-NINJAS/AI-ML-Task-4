@@ -38,7 +38,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 print(f"\nTraining samples: {len(X_train)}, Test samples: {len(X_test)}")
-
 # Hyperparameter tuning
 print("\n Hyperparameter Tuning ")
 
